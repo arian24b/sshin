@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 # sshin - A secure SSH connection helper and session logger.
 
