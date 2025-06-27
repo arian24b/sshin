@@ -10,28 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository's code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Install the Shell Script Compiler (shc)
       - name: Install shc
         run: |
-          apt-get update
-          apt-get install -y shc
+          sudo apt-get update
+          sudo apt-get install -y shc
 
-      # Step 3: Convert the 'sshin' script to a binary
+      - name: List files in workspace
+        run: ls -la
+
       - name: Compile sshin script to binary
         run: shc -r -f sshin -o sshin
 
-      # Step 4: Package release assets into a tarball
       - name: Package release assets
         run: |
           mkdir -p release
           cp sshin sshin-setup sshin-server-setup.sh sshin-harden-ssh.sh README.md README.fa.md release/
           tar -czvf sshin-release.tar.gz -C release .
 
-      # Step 5: Create a new GitHub Release
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
