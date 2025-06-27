@@ -2,6 +2,8 @@
 
 **sshin** is a command-line tool designed to simplify and streamline the process of connecting to and managing multiple remote servers over SSH. It uses simple aliases to connect to pre-configured servers and automatically logs your sessions for auditing and review.
 
+English | [فارسی](README.fa.md)
+
 ## Features
 
 -   **Alias-Based Connections**: Connect to your servers using short, memorable names instead of long hostnames or IP addresses.
@@ -98,9 +100,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
-Don't forget to give the project a star! Thanks again!
-
-### How to Contribute
+Don't forget to give the project a star\! Thanks again\!
 
 1.  **Fork the Project**
 2.  **Create your Feature Branch**
@@ -119,4 +119,4 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for the full text.
+This project is licensed under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for the full text.
