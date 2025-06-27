@@ -22,7 +22,7 @@ jobs:
         run: ls -la
 
       - name: Compile sshin script to binary
-        run: shc -r -f sshin -o sshin
+        run: shc -r -f sshin.sh -o sshin
 
       - name: Package release assets
         run: |
