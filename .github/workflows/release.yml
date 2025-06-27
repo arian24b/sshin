@@ -18,16 +18,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y shc
 
-      - name: List files in workspace
-        run: ls -la
-
       - name: Compile sshin script to binary
         run: shc -r -f sshin.sh -o sshin
 
       - name: Package release assets
         run: |
           mkdir -p release
-          cp sshin sshin-setup sshin-server-setup.sh sshin-harden-ssh.sh README.md README.fa.md release/
+          cp sshin sshin-setup.sh sshin-server-setup.sh sshin-harden-ssh.sh README.md README.fa.md release/
           tar -czvf sshin-release.tar.gz -C release .
 
       - name: Create GitHub Release
