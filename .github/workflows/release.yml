@@ -17,8 +17,8 @@ jobs:
       # Step 2: Install the Shell Script Compiler (shc)
       - name: Install shc
         run: |
-          sudo apt-get update
-          sudo apt-get install -y shc
+          apt-get update
+          apt-get install -y shc
 
       # Step 3: Convert the 'sshin' script to a binary
       - name: Compile sshin script to binary
@@ -28,8 +28,7 @@ jobs:
       - name: Package release assets
         run: |
           mkdir -p release
-          # Copy the new binary and all helper scripts/docs
-          cp sshin sshin-setup sshin-server-setup.sh sshin-harden-ssh.sh README.md release/
+          cp sshin sshin-setup sshin-server-setup.sh sshin-harden-ssh.sh README.md README.fa.md release/
           tar -czvf sshin-release.tar.gz -C release .
 
       # Step 5: Create a new GitHub Release
